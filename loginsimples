@@ -1,0 +1,7 @@
+usuario = input("Digite seu usuário:")
+senha = int(input("Digite sua senha:"))
+
+if senha == 1234:
+ print("Acesso concedido")
+else:
+ print("Acesso negado")
