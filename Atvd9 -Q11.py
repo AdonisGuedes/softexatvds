@@ -4,8 +4,6 @@ class DescontoHandler:
 
         self.proximo = proximo
 
-
-
     def tratar_desconto(self, percentual):
 
         if self.proximo:
@@ -15,9 +13,6 @@ class DescontoHandler:
         else:
 
             print("Nenhum responsável pôde aprovar esse desconto.")
-
-
-
 
 
 class Caixa(DescontoHandler):
@@ -33,10 +28,7 @@ class Caixa(DescontoHandler):
             print("Caixa: não posso aprovar, encaminhando ao gerente...")
 
             super().tratar_desconto(percentual)
-
-
-
-
+            
 
 class Gerente(DescontoHandler):
 
@@ -51,20 +43,13 @@ class Gerente(DescontoHandler):
             print("Gerente: não posso aprovar, encaminhando ao diretor...")
 
             super().tratar_desconto(percentual)
-
-
-
-
+            
 
 class Diretor(DescontoHandler):
 
     def tratar_desconto(self, percentual):
 
         print(f"Diretor: desconto de {percentual}% aprovado sem restrições.")
-
-
-
-
 
 # Criando a cadeia: Caixa -> Gerente -> Diretor
 
@@ -73,8 +58,6 @@ diretor = Diretor()
 gerente = Gerente(diretor)
 
 caixa = Caixa(gerente)
-
-
 
 # Testando
 
