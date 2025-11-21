@@ -1,0 +1,111 @@
+1. c. Identificar unicamente cada linha de uma tabela.
+
+2. b. Permite compreender o que o banco precisa representar e as regras do negócio.
+
+3. d. Decidir sozinho o modelo conceitual do banco.
+
+4. b. O sistema apresentaria erro, pois a chave primária deve ser única.
+
+5.
+
+Entidades:
+- Funcionário (id_func, nome, cargo, salario, id_depto)
+- Departamento (id_depto, nome_depto, localizacao)
+- Projeto (id_proj, nome_proj, prazo)
+Relacionamentos:
+- Funcionário trabalha em Departamento (1:N)
+- Funcionário participa de Projetos (N:M)
+
+6.
+
+a. Cliente (id_cliente, nome, cpf, telefone) → Chave primária: id_cliente
+b. Pedido (id_pedido, data, id_cliente) → Chave primária: id_pedido
+Relação: Pedido.id_cliente é chave estrangeira que liga Pedido a Cliente.
+
+7.
+
+Requisitos funcionais:
+1. Cadastrar hóspedes
+2. Registrar reservas
+3. Consultar disponibilidade de quartos
+4. Cancelar reservas
+5. Emitir comprovante de reserva
+6. Fazer check-in/check-out
+7. Gerar relatórios
+8. Calcular valores e pagamentos
+
+Requisitos não funcionais:
+1. Segurança
+2. Interface amigável
+3. Suporte a múltiplos acessos
+4. Backup automático
+5. Bom desempenho
+
+8. a. Nenhum produto poderá ter o mesmo código.
+
+9. b. O modelo conceitual descreve a realidade do negócio; o lógico traduz isso para tabelas.
+
+10. c. Modelagem conceitual
+
+11. c. Garante maior integridade, segurança e consistência das informações.
+
+12.
+
+Entidades:
+- Cliente (id_cliente, nome, telefone, endereço)
+- Produto (id_produto, nome, preço)
+- Venda (id_venda, data, id_cliente)
+
+Relacionamentos:
+- Cliente realiza Vendas (1:N)
+- Venda contém Produtos (N:M)
+
+13.
+
+PACIENTE (id_paciente PK, nome, telefone)
+MÉDICO (id_medico PK, nome, especialidade)
+CONSULTA (id_consulta PK, data, id_paciente FK, id_medico FK)
+
+14.
+
+a. Requisitos funcionais:
+1. Cadastrar usuários
+2. Permitir envio de mensagens/postagens
+
+b. Requisitos não funcionais:
+1. Disponibilidade 24h
+2. Privacidade e segurança
+
+c. Entidade:
+Usuário (id_usuario, nome, email, senha, data_cadastro)
+
+15.
+
+a. Facilita implementação e manutenção do banco.
+b. Ajuda a evitar erros e redundância.
+
+16. 
+
+a. A chave primária é uma combinação única de valores que identifica cada registro (linha) de uma tabela.
+
+17. b. “Produto” é uma entidade e os demais são atributos.
+
+18. b. Levantar e entender o que o sistema deve armazenar e como deve funcionar.
+
+19.
+
+Entidades:
+- Cliente
+- Produto
+- Venda
+
+Atributos:
+- Cliente (id_cliente PK, nome, telefone, endereço)
+- Produto (id_produto PK, nome, preço)
+- Venda (id_venda PK, data, id_cliente FK)
+
+Representação relacional:
+CLIENTE (id_cliente PK, nome, telefone, endereco)
+PRODUTO (id_produto PK, nome, preco)
+VENDA (id_venda PK, data, id_cliente FK)
+ITENS_VENDA (id_venda FK, id_produto FK, quantidade)

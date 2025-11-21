@@ -7,3 +7,4 @@ while True:
     else: 
         print("A nota tem que ser entre 0 e 5")
         nota = int(input("Digite uma nota entre 0 e 5:"))
+        
